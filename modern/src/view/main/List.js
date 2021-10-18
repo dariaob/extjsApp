@@ -11,9 +11,7 @@ Ext.define('newApp.view.main.List', {
 
     title: 'Personnel',
 
-    store: {
-        type: 'personnel'
-    },
+    store: {type: 'extra'},
 
     columns: [{ 
         text: 'Name',
@@ -34,5 +32,10 @@ Ext.define('newApp.view.main.List', {
 
     listeners: {
         select: 'onItemSelected'
-    }
+    },
+    plugins:[{
+        type: 'grideditable',
+        triggerEvent: 'doubletap',
+        enableDeleteButton: true,
+    }],
 });

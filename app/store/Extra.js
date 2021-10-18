@@ -4,6 +4,8 @@ Ext.define('newApp.store.Extra', {
     model: 'newApp.model.Extra',
     itemId: 'extra',
     storeId:'extra',
+    autoLoad: true,
+    autoSync: true,
     data: {
         items: [
             { name: 'Женя Лук', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111" },
